@@ -14,12 +14,13 @@ class MongoDatabase{
             $this->mongo = new MongoDB\Client($dsn);
 
         }catch(Exception $e){
-            
-            die("Database connection failure: " . $e->getMessage());
+            error_log("MongoDB connection failure: " . $e->getMessage());
+            http_response_code(503);
+            die("Service temporairement indisponible.");
         }
     }
 
-    
+
     public static function getInstance(): MongoDatabase {
         // Instanciation "paresseuse" : on ne crée l'objet que la première fois.
         if(self::$MongoInstance === null){
