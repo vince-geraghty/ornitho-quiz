@@ -1,7 +1,14 @@
 <?php
+require_once __DIR__ . "/../models/Oiseau.php";
 
 class BirdnetController
 {
+    private Oiseau $oiseau;
+
+    public function __construct()
+    {
+        $this->oiseau = new Oiseau;
+    }
     /**
      * Page principale d'identification BirdNET
      */
@@ -14,8 +21,7 @@ class BirdnetController
      * API endpoint : cherche une espèce dans la BDD par nom latin
      * Appelé en AJAX depuis le JS après analyse BirdNET
      */
-    public function matchSpecies()
-{
+    public function matchSpecies(){
     header('Content-Type: application/json');
 
         $nomLatin = $_GET['nom_latin'] ?? '';
@@ -25,23 +31,8 @@ class BirdnetController
             return;
         }
 
-        $db = Database::getInstance()->getConnection();
-
-        // 1. Chercher par nom latin exact
-        $stmt = $db->prepare("SELECT id, nom_commun, nom_latin FROM oiseaux WHERE nom_latin = ?");
-        $stmt->execute([$nomLatin]);
-        $oiseau = $stmt->fetch(PDO::FETCH_ASSOC);
-
-        // 2. Si pas trouvé, chercher par nom de genre + espèce (deuxième mot)
-        if (!$oiseau) {
-            $parts = explode(' ', $nomLatin);
-            if (count($parts) >= 2) {
-                $espece = $parts[1];
-                $stmt = $db->prepare("SELECT id, nom_commun, nom_latin FROM oiseaux WHERE nom_latin LIKE ?");
-                $stmt->execute(['%' . $espece]);
-                $oiseau = $stmt->fetch(PDO::FETCH_ASSOC);
-            }
-        }
+        // Chercher par nom latin exact
+        $oiseau = $this->oiseau->findByNomLatin($nomLatin);
 
         if ($oiseau) {
             echo json_encode([
