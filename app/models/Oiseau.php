@@ -5,7 +5,8 @@ require_once __DIR__ . '/../../core/Database.php';
 class Oiseau {
     private $db;
 
-    public function __construct() {
+    public function __construct() 
+    {
         $this->db = Database::getInstance()->getConnection();
     }
 
@@ -90,5 +91,11 @@ class Oiseau {
             $stmt->execute(['%' . $terme . '%', '%' . $terme . '%']);
         }
         return $stmt->fetchAll();
+    }
+
+    public function findByNomLatin(string $nomLatin) : array|false{
+        $stmt = $this->db->prepare("SELECT id, nom_commun, nom_latin FROM oiseaux WHERE nom_latin = ?");
+        $stmt->execute([$nomLatin]);
+        return $stmt->fetch();
     }
 }
