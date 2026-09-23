@@ -384,17 +384,20 @@ document.addEventListener('alpine:init', () => {
                         matched: false,
                         url: null
                     };
-
                     try {
                         const resp = await fetch(`/birdnet/match?nom_latin=${encodeURIComponent(det.scientificName)}`);
+                        if (!resp.ok) {
+                            throw new Error(`HTTP ${resp.status}`);
+                        }
                         const data = await resp.json();
                         if (data.found) {
                             result.matched = true;
                             result.url = data.url;
                             result.commonName = data.nom_commun;
                         }
-                    } catch (e) { /* pas grave */ }
-
+                    } catch (e) {
+                        console.error('Correspondance BDD impossible :', e);
+                    }
                     results.push(result);
                 }
 
