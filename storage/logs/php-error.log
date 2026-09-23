@@ -1,0 +1,2 @@
+[01-Sep-2026 15:29:59 UTC] PHP Warning:  Undefined variable $variableInexistante in /var/www/html/public/test1.php on line 3
+[16-Sep-2026 12:34:56 UTC] Database connection failure: SQLSTATE[HY000] [1045] Access denied for user 'root'@'172.22.0.4' (using password: YES)
