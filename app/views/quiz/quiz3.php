@@ -30,11 +30,11 @@ require_once __DIR__ . '/../layout/header.php';
                                 <button class="player-btn"
                                         type="button"
                                         @click="toggle($refs.audio_0, idx)"
-                                        :aria-label="currentIdx === idx && !paused ? 'Pause' : 'Lecture'">
-                                    <svg x-show="currentIdx !== idx || paused" width="12" height="14" viewBox="0 0 12 14" fill="none">
+                                        :aria-label="currentIdx === idx && !paused ? 'Mettre en pause' : 'Écouter le chant'">
+                                    <svg x-show="currentIdx !== idx || paused" width="12" height="14" viewBox="0 0 12 14" fill="none" aria-hidden="true">
                                         <path d="M1 1L11 7L1 13V1Z" fill="currentColor"/>
                                     </svg>
-                                    <svg x-show="currentIdx === idx && !paused" width="12" height="14" viewBox="0 0 12 14" fill="none">
+                                    <svg x-show="currentIdx === idx && !paused" width="12" height="14" viewBox="0 0 12 14" fill="none" aria-hidden="true">
                                         <rect x="1" y="1" width="3.5" height="12" rx="1" fill="currentColor"/>
                                         <rect x="7.5" y="1" width="3.5" height="12" rx="1" fill="currentColor"/>
                                     </svg>
@@ -81,9 +81,11 @@ require_once __DIR__ . '/../layout/header.php';
                                 @ended="onEnded(idx)"
                                 @loadedmetadata="setDuration($refs['audio_res'], idx)">
                             </audio>
-                            <button class="player-btn" type="button" @click="toggle($refs.audio_res, idx)">
-                                <svg x-show="currentIdx !== idx || paused" width="12" height="14" viewBox="0 0 12 14" fill="none"><path d="M1 1L11 7L1 13V1Z" fill="currentColor"/></svg>
-                                <svg x-show="currentIdx === idx && !paused" width="12" height="14" viewBox="0 0 12 14" fill="none"><rect x="1" y="1" width="3.5" height="12" rx="1" fill="currentColor"/><rect x="7.5" y="1" width="3.5" height="12" rx="1" fill="currentColor"/></svg>
+                            <button class="player-btn" type="button" 
+                                    @click="toggle($refs.audio_res, idx)"
+                                    :aria-label="currentIdx === idx && !paused ? 'Mettre en pause' : 'Écouter le chant'">
+                                <svg x-show="currentIdx !== idx || paused" width="12" height="14" viewBox="0 0 12 14" fill="none" aria-hidden="true"><path d="M1 1L11 7L1 13V1Z" fill="currentColor"/></svg>
+                                <svg x-show="currentIdx === idx && !paused" width="12" height="14" viewBox="0 0 12 14" fill="none" aria-hidden="true"><rect x="1" y="1" width="3.5" height="12" rx="1" fill="currentColor"/><rect x="7.5" y="1" width="3.5" height="12" rx="1" fill="currentColor"/></svg>
                             </button>
                             <div class="player-progress-wrap" @click="seek($event, $refs.audio_res, idx)">
                                 <div class="player-progress-bg"></div>
