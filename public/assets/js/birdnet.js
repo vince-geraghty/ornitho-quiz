@@ -384,7 +384,6 @@ document.addEventListener('alpine:init', () => {
                         matched: false,
                         url: null
                     };
-
                     try {
                         const resp = await fetch(`/birdnet/match?nom_latin=${encodeURIComponent(det.scientificName)}`);
                         if (!resp.ok) {
@@ -399,7 +398,6 @@ document.addEventListener('alpine:init', () => {
                     } catch (e) {
                         console.error('Correspondance BDD impossible :', e);
                     }
-
                     results.push(result);
                 }
 

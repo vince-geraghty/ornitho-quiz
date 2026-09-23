@@ -85,4 +85,6 @@ mentor pédagogique (explications, guidage, revue de code).
 
 ## Auteur
 
-Projet développé et maintenu par Vincent Geraghty. Ce projet est d
+## Auteur
+
+Projet développé et maintenu par Vincent Geraghty. Ce projet est développé dans le cadre de ma formation de développeur web chez Studi, en vue du titre professionnel Développeur web et web mobile (RNCP niveau 5). Il s'agit d'un projet personnel, sans but lucratif.
