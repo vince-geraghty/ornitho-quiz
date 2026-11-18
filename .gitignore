@@ -1,6 +1,6 @@
 .env
 divers/
 public/audio/
-vendor/
+/vendor/
 storage/logs/*
 !storage/logs/.gitkeep
