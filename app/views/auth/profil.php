@@ -42,7 +42,7 @@ require_once __DIR__ . '/../layout/nav.php';
     </div>
 </main>
 
-<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="/assets/js/vendor/chart.umd.js"></script>
 
 <?php 
 $loadScriptJs = 'profil-chart.js';
