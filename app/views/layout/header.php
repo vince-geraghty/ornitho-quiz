@@ -43,7 +43,7 @@
     <?php if (isset($pageCss) && $pageCss === 'birdnet'): ?>
         <script src="/assets/js/birdnet.js" defer></script>
     <?php endif; ?>
-    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <script defer src="/assets/js/vendor/alpine.min.js"></script>
     <script src="https://kit.fontawesome.com/a5f2a52ad7.js" crossorigin="anonymous"></script>
 </head>
 <body>
