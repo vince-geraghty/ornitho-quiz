@@ -4,7 +4,7 @@
  * Charge le modèle depuis Cloudflare R2 et analyse l'audio
  */
 
-importScripts('https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest')
+importScripts('/assets/js/vendor/tf.min.js')
 
 main()
 async function main() {
