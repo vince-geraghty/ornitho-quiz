@@ -15,7 +15,9 @@ require_once __DIR__ . '/../layout/header.php';
     </div>
 </section>
 
-<section class="birdnet-app" x-data="birdnetApp()">
+<section class="birdnet-app" 
+        x-data="birdnetApp()" 
+        data-model-url="<?= htmlspecialchars($modelUrl, ENT_QUOTES, 'UTF-8') ?>">
 
     <!-- Chargement du modèle -->
     <div class="birdnet-model-status" x-show="modelStatus !== 'ready'">

@@ -14,6 +14,7 @@ class BirdnetController
      */
     public function index()
     {
+        $modelUrl = getenv('BIRDNET_MODEL_URL') ?: '';
         require_once __DIR__ . '/../views/birdnet/birdnet.php';
     }
 
