@@ -8,7 +8,7 @@ RUN pecl install mongodb && docker-php-ext-enable mongodb
 COPY php-error-logging.ini /usr/local/etc/php/conf.d/
 
 
-RUN a2enmod rewrite
+RUN a2enmod rewrite headers
 
 
 COPY apache.conf /etc/apache2/sites-available/000-default.conf
