@@ -69,7 +69,13 @@
 .fiche-header .lien-externes a .img-lien{
     border: 0.2px solid rgba(235, 241, 237);
 }
+
 .lien-externes a .fa-google, .lien-externes a .fa-wikipedia-w, .lien-externes a .fa-youtube , .lien-externes a .fa-feather, .lien-externes a .fa-dove {
+    font-size: 1.5rem;
+    color: var(--dawn);
+}
+
+.lien-externes a .icone {
     font-size: 1.5rem;
     color: var(--dawn);
 }
@@ -679,6 +685,11 @@
     }
 
     .lien-externes a .fa-google, .lien-externes a .fa-wikipedia-w, .lien-externes a .fa-youtube , .lien-externes a .fa-feather, .lien-externes a .fa-dove {
+        font-size: 2rem;
+        color: var(--dawn);
+    }
+
+    .lien-externes a .icone {
         font-size: 2rem;
         color: var(--dawn);
     }

@@ -743,6 +743,12 @@
     margin-bottom: 0.5rem;
 }
 
+.birdnet-result__external  .icone {
+    font-size: 1.5rem;
+    color: var(--dawn);
+    margin-bottom: 0.5rem;
+}
+
 /* ─── Info Section ──────────────────────────────────────────── */
 .birdnet-info {
     background: rgba(26, 46, 26, 0.2);
