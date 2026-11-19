@@ -4,3 +4,5 @@ public/audio/
 /vendor/
 storage/logs/*
 !storage/logs/.gitkeep
+# Modèle BirdNET (~57 Mo) — téléchargé depuis R2, hors dépôt
+public/birdnet-model/
