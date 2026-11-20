@@ -18,7 +18,9 @@ require_once __DIR__ . '/../layout/nav.php';
 
             <div class="d-flex password flex-column">
                 <label class="form-label mt-3" for="password">Mot de passe</label>
-                <button type="button" class="btn-password m-auto hover-btn" data-target="password" aria-label="Voir le mot de passe" data-tooltip="Voir le mot de passe"><i class="fa-regular fa-eye"></i></button>
+                <button type="button" class="btn-password m-auto hover-btn" data-target="password" aria-label="Voir le mot de passe" data-tooltip="Voir le mot de passe">
+                    <svg class="icone" aria-hidden="true"><use href="/assets/img/icones.svg#eye"></use></svg>
+                </button>
             </div>
             <input class="form-control"  type="password" name="password" id="password" required><br>
 

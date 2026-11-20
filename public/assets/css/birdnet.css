@@ -736,8 +736,7 @@
     justify-content: space-evenly;
 }
 
-.birdnet-result__external  .fa-google , .birdnet-result__external  .fa-wikipedia-w,
-.birdnet-result__external  .fa-youtube , .birdnet-result__external  .fa-feather  , .birdnet-result__external  .fa-dove {
+.birdnet-result__external  .icone {
     font-size: 1.5rem;
     color: var(--dawn);
     margin-bottom: 0.5rem;

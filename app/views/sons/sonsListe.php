@@ -108,15 +108,30 @@ require_once __DIR__ . '/../layout/header.php';
 
         <div class="onglets">
             <div class="lien-externes">
-                <a href="https://www.google.com/search?q=<?= urlencode($oiseau['nom_commun']) ?>" target="_blank"><i class="fa-brands fa-google" title="Google"></i></a>
+                <a href="https://www.google.com/search?q=<?= urlencode($oiseau['nom_commun']) ?>" target="_blank">
+                    <svg class="icone" aria-hidden="true"><use href="/assets/img/icones.svg#google"></use></svg>
+                    <span class="visually-hidden">Recherche Google (nouvelle fenêtre)</span>
+                </a>
                 
-                <a href="https://fr.wikipedia.org/wiki/<?= str_replace(' ', '_', $oiseau['nom_commun']) ?>" target="_blank"><i class="fa-brands fa-wikipedia-w" title="Wikipedia"></i></a>
+                <a href="https://fr.wikipedia.org/wiki/<?= str_replace(' ', '_', $oiseau['nom_commun']) ?>" target="_blank">
+                    <svg class="icone" aria-hidden="true"><use href="/assets/img/icones.svg#wikipedia-w"></use></svg>
+                    <span class="visually-hidden">Voir sur Wikipedia (nouvelle fenêtre)</span>
+                </a>
 
-                <a href="https://www.youtube.com/results?search_query=<?= urlencode($oiseau['nom_commun']) ?>" target="_blank"><i class="fa-brands fa-youtube" title="YouTube"></i></a>
+                <a href="https://www.youtube.com/results?search_query=<?= urlencode($oiseau['nom_commun']) ?>" target="_blank">
+                    <svg class="icone" aria-hidden="true"><use href="/assets/img/icones.svg#youtube"></use></svg>
+                    <span class="visually-hidden">Voir sur YouTube (nouvelle fenêtre)</span>
+                </a>
 
-                <a href="https://www.oiseaux.net/search?q=<?= urlencode($oiseau['nom_commun']) ?>" target="_blank"><i class="fa-solid fa-feather" title="Oiseaux.net"></i></a>
+                <a href="https://www.oiseaux.net/search?q=<?= urlencode($oiseau['nom_commun']) ?>" target="_blank">
+                    <svg class="icone" aria-hidden="true"><use href="/assets/img/icones.svg#dove"></use></svg>
+                    <span class="visually-hidden">Voir sur oiseaux.net (nouvelle fenêtre)</span>
+                </a>
                 
-                <a href="https://www.gbif.org/fr/search?q=<?= urlencode($oiseau['nom_commun']) ?>" target="_blank"><i class="fa-solid fa-dove" title="gbif.org"></i></a>
+                <a href="https://www.gbif.org/fr/search?q=<?= urlencode($oiseau['nom_commun']) ?>" target="_blank">
+                    <svg class="icone" aria-hidden="true"><use href="/assets/img/icones.svg#feather"></use></svg>
+                    <span class="visually-hidden">Voir sur gbif.org (nouvelle fenêtre)</span>
+                </a>
             </div>
             <input type="radio" name="onglet" class="radio-display-none" id="tab-sons" checked>
             <input type="radio" name="onglet" class="radio-display-none" id="tab-infos">
