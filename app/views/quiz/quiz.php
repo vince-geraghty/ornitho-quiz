@@ -48,6 +48,7 @@ require_once __DIR__ . '/../layout/header.php';
                                     <span class="player-time" x-text="currentIdx === idx ? currentTime + ' / ' + (durations[idx] ?? '0:00') : (durations[idx] ?? '0:00')">0:00</span>
                                 </div>
                                 <input type="radio" name="son_id" class="radio-quiz" value="<?= htmlspecialchars($son['id']) ?>">
+                            </div>
                         <?php endforeach; ?>
                         <p class="error-mess"></p>
                         <div class="validation">
