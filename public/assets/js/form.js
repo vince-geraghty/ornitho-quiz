@@ -9,12 +9,14 @@ btnPassword.forEach(btn =>{
     btn.addEventListener('click' , () =>{
         const input = document.getElementById(btn.dataset.target);
         if(input.type === "password"){
-            btn.innerHTML = '<i class="fa-solid fa-eye"></i>';
+            btn.innerHTML = '<svg class="icone" aria-hidden="true"><use href="/assets/img/icones.svg#eye-slash"></use></svg>';
             btn.setAttribute('aria-label', 'Masquer le mot de passe');
+            btn.setAttribute('data-tooltip', 'Masquer le mot de passe');
             input.type = "text";
         }else if(input.type === "text"){
-            btn.innerHTML = '<i class="fa-regular fa-eye"></i>';
+            btn.innerHTML = '<svg class="icone" aria-hidden="true"><use href="/assets/img/icones.svg#eye"></use></svg>';
             btn.setAttribute('aria-label', 'Voir le mot de passe');
+            btn.setAttribute('data-tooltip', 'Voir le mot de passe');
             input.type = "password";
         }
     });

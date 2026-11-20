@@ -58,17 +58,7 @@
     text-align: center;
 }
 
-.quiz-item .fa-hand-point-left{
-    color: var(--dawn);
-    margin-left: 2rem;
-    animation: pointer-doigt 1s ease-out  infinite alternate;
-}
 
-.quiz-item .icone-doigt{
-    color: var(--dawn);
-    margin-left: 2rem;
-    animation: pointer-doigt 1s ease-out  infinite alternate;
-}
 
 .titre-jeu{
     font-size: 1.1rem;
@@ -234,18 +224,6 @@ input[type="radio"] {
         transform: translateY(0);
     }
 }
-
-@keyframes pointer-doigt {
-    from {
-        transform: translateX(0);
-    }
-
-    to {
-        transform: translateX(1.25rem);
-    }
-    
-}
-
 
 @media (min-width: 1024px){
     .img-fond{
