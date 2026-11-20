@@ -231,7 +231,7 @@ require_once __DIR__ . '/../layout/header.php';
 
                 <span class="birdnet-player__time" x-text="currentTime"></span>
             </div>
-                    </div>
+        </div>
     </div>
 
     <!-- Chargement du modèle -->
@@ -281,24 +281,29 @@ require_once __DIR__ . '/../layout/header.php';
                         <span>Fiche absente. En savoir plus :</span>
                         <div class="external-links">
                             <a :href="'https://www.google.com/search?q=' + encodeURIComponent(result.commonName + ' oiseau')" 
-                            target="_blank" rel="noopener" title="Rechercher sur Google">
-                                <i class="fa-brands fa-google" title="Google"></i>
+                            target="_blank" rel="noopener">
+                                <svg class="icone" aria-hidden="true"><use href="/assets/img/icones.svg#google"></use></svg>
+                                <span class="visually-hidden">Recherche Google (nouvelle fenêtre)</span>
                             </a>
                             <a :href="'https://fr.wikipedia.org/w/index.php?search=' + encodeURIComponent(result.commonName)"
-                            target="_blank" rel="noopener" title="Wikipedia">
-                                <i class="fa-brands fa-wikipedia-w" title="Wikipedia"></i>
+                            target="_blank" rel="noopener">
+                                <svg class="icone" aria-hidden="true"><use href="/assets/img/icones.svg#wikipedia-w"></use></svg>
+                                <span class="visually-hidden">Voir sur Wikipedia (nouvelle fenêtre)</span>
                             </a>
                             <a :href="'https://www.youtube.com/results?search_query=' + encodeURIComponent(result.commonName + ' chant oiseau')" 
-                            target="_blank" rel="noopener" title="YouTube">
-                                <i class="fa-brands fa-youtube" title="YouTube"></i>
+                            target="_blank" rel="noopener">
+                                <svg class="icone" aria-hidden="true"><use href="/assets/img/icones.svg#youtube"></use></svg>
+                                <span class="visually-hidden">Voir sur YouTube (nouvelle fenêtre)</span>
                             </a>
-                            <a :href="'https://www.google.com/search?q=site:oiseaux.net+' + encodeURIComponent(result.commonName)"
-                            target="_blank" rel="noopener" title="Rechercher sur oiseaux.net">
-                                <i class="fa-solid fa-feather" title="Oiseaux.net"></i>
+                            <a :href="'https://www.oiseaux.net/search?q=' + encodeURIComponent(result.commonName)"
+                            target="_blank" rel="noopener">
+                                <svg class="icone" aria-hidden="true"><use href="/assets/img/icones.svg#dove"></use></svg>
+                                <span class="visually-hidden">Voir sur oiseaux.net (nouvelle fenêtre)</span>
                             </a>
                             <a :href="'https://www.gbif.org/fr/species/search?q=' + encodeURIComponent(result.scientificName)" 
-                            target="_blank" rel="noopener" title="Rechercher sur GBIF">
-                                <i class="fa-solid fa-dove" title="gbif.org"></i>
+                            target="_blank" rel="noopener">
+                                <svg class="icone" aria-hidden="true"><use href="/assets/img/icones.svg#feather"></use></svg>
+                                <span class="visually-hidden">Voir sur gbif.org (nouvelle fenêtre)</span>
                             </a>
                         </div>
                     </div>
