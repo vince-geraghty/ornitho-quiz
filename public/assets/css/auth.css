@@ -137,12 +137,18 @@ main{
     border: none;
 }
 
-.btn-password i{
+.btn-password {
     color: var(--cream);
     font-size: 1.5rem;
 }
 
-.btn-password i:hover{
+
+.btn-password .icone{
+    color: var(--cream);
+    font-size: 1.5rem;
+}
+
+.btn-password .icone:hover{
     scale: 1.2;
 }
 

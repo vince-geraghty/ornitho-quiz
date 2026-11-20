@@ -42,6 +42,5 @@
         <script src="/assets/js/birdnet.js" defer></script>
     <?php endif; ?>
     <script defer src="/assets/js/vendor/alpine.min.js"></script>
-    <script src="https://kit.fontawesome.com/a5f2a52ad7.js" crossorigin="anonymous"></script>
 </head>
 <body>
