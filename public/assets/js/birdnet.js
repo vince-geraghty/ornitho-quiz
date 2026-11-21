@@ -5,10 +5,7 @@
 
 const BIRDNET_SAMPLE_RATE = 48000;
 const BIRDNET_CHUNK_SIZE = 144000; // 3 secondes à 48 kHz
-// URL de base des modèles sur R2
-const BIRDNET_MODEL_URL = window.AUDIO_BASE_URL
-    ? window.AUDIO_BASE_URL.replace(/\/$/, '') + '/birdnet-model'
-    : '/birdnet-model';
+
 
 document.addEventListener('alpine:init', () => {
     Alpine.data('birdnetApp', () => ({
@@ -55,7 +52,8 @@ document.addEventListener('alpine:init', () => {
             this.modelLoadingDetail = 'Initialisation...';
 
             try {
-                const workerUrl = `/assets/js/birdnet-worker.js?modelUrl=${encodeURIComponent(BIRDNET_MODEL_URL)}`;
+                const modelUrl = this.$el.dataset.modelUrl || '/birdnet-model';
+                const workerUrl = `/assets/js/birdnet-worker.js?modelUrl=${encodeURIComponent(modelUrl)}`;
                 this.worker = new Worker(workerUrl);
 
                 await new Promise((resolve, reject) => {
@@ -392,7 +390,7 @@ document.addEventListener('alpine:init', () => {
                         const data = await resp.json();
                         if (data.found) {
                             result.matched = true;
-                            result.url = data.url;
+                            result.url = `/oiseau/${data.id}?from=birdnet`;
                             result.commonName = data.nom_commun;
                         }
                     } catch (e) {

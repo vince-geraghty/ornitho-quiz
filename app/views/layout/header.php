@@ -25,9 +25,7 @@
     <meta name="apple-mobile-web-app-title" content="Ornithoquiz" />
     <link rel="manifest" href="/site.webmanifest" />
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/css/fonts.css">
     <link href="/assets/css/vendor/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="/assets/css/landing.css">
     <link rel="stylesheet" href="/assets/css/fiche.css">
@@ -44,6 +42,5 @@
         <script src="/assets/js/birdnet.js" defer></script>
     <?php endif; ?>
     <script defer src="/assets/js/vendor/alpine.min.js"></script>
-    <script src="https://kit.fontawesome.com/a5f2a52ad7.js" crossorigin="anonymous"></script>
 </head>
 <body>

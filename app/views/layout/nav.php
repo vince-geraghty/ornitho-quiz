@@ -20,9 +20,11 @@
         
         <a href="/identifier">Identifier un oiseau</a>
         <?php if(!isset($_SESSION['utilisateur_id'])) : ?>
-            <a href="/login"><i class="fa-solid fa-user"></i> Connexion</a>
+            
+            <a href="/login"><svg class="icone" aria-hidden="true"><use href="/assets/img/icones.svg#user"></use></svg> Connexion</a>
         <?php else : ?>
-            <a href="/profil"><i class="fa-solid fa-user"></i> Profil/Stats</a>
+            <a href="/profil"><svg class="icone" aria-hidden="true"><use href="/assets/img/icones.svg#user"></use></svg> Profil/Stats</a>
+            
             <a href="/logout">Déconnexion</a>
         <?php endif ?>
     </div>
