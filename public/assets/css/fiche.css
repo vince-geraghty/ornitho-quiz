@@ -47,6 +47,9 @@
     /* margin-bottom: 2rem; */
     margin-left: 2rem;
     transition:  color var(--transition), background-color var(--transition);
+    font-family: inherit;
+    background-color: transparent;
+    cursor: pointer;
 }
 .fiche-back:hover { 
     color: var(--leaf); 

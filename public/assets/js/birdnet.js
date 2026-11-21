@@ -390,7 +390,7 @@ document.addEventListener('alpine:init', () => {
                         const data = await resp.json();
                         if (data.found) {
                             result.matched = true;
-                            result.url = data.url;
+                            result.url = `/oiseau/${data.id}?from=birdnet`;
                             result.commonName = data.nom_commun;
                         }
                     } catch (e) {

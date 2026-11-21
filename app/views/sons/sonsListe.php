@@ -15,9 +15,9 @@ require_once __DIR__ . '/../layout/header.php';
                     <p class="fiche-latin"><?= htmlspecialchars($oiseau['nom_latin'] ?? '') ?></p>
                     <!-- RETOUR -->
                     <?php if(isset($_GET['from']) && $_GET['from'] === 'quiz'): ?>
-                        <a href="javascript:history.back()" class="fiche-back">← Retour au Quiz</a>
+                        <button type="button" class="fiche-back button-back" data-back>← Retour au Quiz</button>
                     <?php elseif(isset($_GET['from']) && $_GET['from'] === 'birdnet'): ?>
-                        <a href="javascript:history.back()" class="fiche-back">← Retour à l'identification</a>
+                        <button type="button" class="fiche-back button-back" data-close>← Retour à l'identification</button>
                     <?php else: ?>
                         <a href="/oiseaux" class="fiche-back"> ← Retour à la liste</a>
                     <?php endif; ?>
