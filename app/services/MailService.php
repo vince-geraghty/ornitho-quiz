@@ -50,15 +50,15 @@ class MailService{
         $this->mail->isSMTP();
 
         // Credentials SMTP lus depuis les variables d'environnement
-        $this->mail->Host     = getenv('MAILTRAP_HOST');
+        $this->mail->Host     = getenv('MAIL_HOST');
         $this->mail->SMTPAuth = true;
-        $this->mail->Username = getenv('MAILTRAP_USERNAME');
-        $this->mail->Password = getenv('MAILTRAP_PASSWORD');
-        $this->mail->Port     = getenv('MAILTRAP_PORT');
+        $this->mail->Username = getenv('MAIL_USER');
+        $this->mail->Password = getenv('MAIL_PASS');
+        $this->mail->Port     = getenv('MAIL_PORT');
 
         // Expéditeur affiché dans le client mail du destinataire
         // À personnaliser selon le projet
-        $this->mail->setFrom('noreply@monapp.com', 'OrnithoQuiz');
+        $this->mail->setFrom( getenv('MAIL_FROM'), getenv('MAIL_FROM_NAME'));
 
         // Destinataire
         $this->mail->addAddress($to);
