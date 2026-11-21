@@ -40,8 +40,7 @@ class BirdnetController
                 'found' => true,
                 'id' => $oiseau['id'],
                 'nom_commun' => $oiseau['nom_commun'],
-                'nom_latin' => $oiseau['nom_latin'],
-                'url' => '/oiseau/' . $oiseau['id']
+                'nom_latin' => $oiseau['nom_latin']
             ]);
         } else {
             echo json_encode([

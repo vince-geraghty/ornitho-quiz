@@ -8,6 +8,12 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
+    
+    document.addEventListener('click', (e) => {
+        if (e.target.closest('[data-back]')) history.back();
+        if (e.target.closest('[data-close]')) window.close();
+    });
+
 });
 document.addEventListener('alpine:init', () => {
     Alpine.data('audioManager', () => ({
