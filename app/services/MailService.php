@@ -16,8 +16,7 @@
 
 use PHPMailer\PHPMailer\PHPMailer;
 
-// Autoloader Composer — charge PHPMailer et toutes les dépendances installées via composer require
-require_once __DIR__ . '/../../vendor/autoload.php';
+
 
 class MailService{
 
@@ -59,7 +58,7 @@ class MailService{
 
         // Expéditeur affiché dans le client mail du destinataire
         // À personnaliser selon le projet
-        $this->mail->setFrom('vince.63@outlook.fr', 'OrnithoQuiz');
+        $this->mail->setFrom( getenv('MAIL_FROM'), getenv('MAIL_FROM_NAME'));
 
         // Destinataire
         $this->mail->addAddress($to);
