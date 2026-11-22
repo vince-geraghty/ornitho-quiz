@@ -3,8 +3,12 @@ FROM  php:8.3.23-apache
 
 RUN docker-php-ext-install pdo pdo_mysql
 
+RUN pecl install mongodb && docker-php-ext-enable mongodb
 
-RUN a2enmod rewrite
+COPY php-error-logging.ini /usr/local/etc/php/conf.d/
+
+
+RUN a2enmod rewrite headers
 
 
 COPY apache.conf /etc/apache2/sites-available/000-default.conf
