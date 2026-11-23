@@ -6,3 +6,6 @@ storage/logs/*
 !storage/logs/.gitkeep
 # Modèle BirdNET (~57 Mo) — téléchargé depuis R2, hors dépôt
 public/birdnet-model/
+# Scripts Python d'import : conserves hors depot
+/scripts/*
+!/scripts/deploy.sh
