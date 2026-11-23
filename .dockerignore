@@ -1,0 +1,12 @@
+.env
+.git
+.gitattributes
+.gitignore
+.vscode/
+Dockerfile
+README.md
+conception/
+docker-compose.yml
+scripts/
+storage/
+public/birdnet-model/
