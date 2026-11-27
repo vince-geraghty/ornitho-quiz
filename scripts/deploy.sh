@@ -54,4 +54,5 @@ rsync -rltzvi "${MODE[@]}" "${DELETE[@]}" \
   --exclude='/scripts/' \
   --exclude='/storage/' \
   --exclude='/public/birdnet-model/' \
+  --exclude='/.dockerignore' \
   "$SRC" "$DEST"
