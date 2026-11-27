@@ -6,7 +6,7 @@ require_once __DIR__ . '/../views/layout/nav.php';
 <main class="main-confidentialite">
     <section class="politique-confidentialite d-flex flex-column mb-5">
         <h1 class="text-center">Politique de confidentialité</h1>
-        <p><em>Dernière mise à jour : 02/09/2026</em></p>
+        <p><em>Dernière mise à jour : 27/11/2026</em></p>
 
         <p>
             Cette politique explique quelles données personnelles OrnithoQuizz collecte,
@@ -111,7 +111,8 @@ require_once __DIR__ . '/../views/layout/nav.php';
                 </tr>
                 <tr>
                     <td>Cloudflare R2</td>
-                    <td>Stockage des fichiers audio (sons d'oiseaux)</td>
+                    <td>Stockage et diffusion des fichiers audio (sons d'oiseaux) ainsi que
+        du modèle de reconnaissance utilisé par la page d'identification</td>
                     <td>Union européenne (Europe de l'Ouest, WEUR)</td>
                 </tr>
                 <tr>
@@ -121,6 +122,14 @@ require_once __DIR__ . '/../views/layout/nav.php';
                 </tr>
             </tbody>
         </table>
+
+        <p>
+            Les sons et le modèle de reconnaissance sont chargés directement depuis les
+            serveurs de Cloudflare R2 par votre navigateur. Cette connexion transmet
+            nécessairement votre adresse IP à Cloudflare, qui agit en qualité de
+            sous-traitant pour le compte de l'éditeur du site et ne l'exploite pas à
+            ses propres fins.
+        </p>
 
         <h2>5. Durée de conservation</h2>
         <p>
